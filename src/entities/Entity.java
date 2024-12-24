@@ -1,8 +1,17 @@
 package entities;
 
 public abstract class  Entity {
-	private Double yearIncome;
-	private String name;	
+	protected Double yearIncome;
+	protected String name;	
+	public Entity() {
+	}
+	
+	public Entity(String name, Double yearIncome) {// não esquecer do construtor, mesmo abstrata precisa de construtor
+		
+		this.yearIncome = yearIncome;
+		this.name = name;
+	}
+
 	public Double getIncome() {
 		return yearIncome;
 	}
